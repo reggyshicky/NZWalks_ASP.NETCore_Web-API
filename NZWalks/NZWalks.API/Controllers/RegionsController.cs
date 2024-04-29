@@ -68,12 +68,29 @@ namespace NZWalks.API.Controllers
         }
 
         [HttpPost]
-        [Route("addRegion")]
-        public IActionResult AddRegion(Region  region)
+        public IActionResult CreateRegion([FromBody] AddRequestDto addRequestDto)
         {
-            _dbContext.Regions.Add(region);
+            //Map or covert the Dto to Domain Model
+
+            var regionDomainModel = new Region()
+            {
+                Code = addRequestDto.Code,
+                Name = addRequestDto.Name,
+                RegionImageUrl = addRequestDto.RegionImageUrl
+
+            };
+            _dbContext.Regions.Add(regionDomainModel);
             _dbContext.SaveChanges();
-            return Ok("Region added succesfully");
+
+            //Map DomainModel to RegionDto
+            var regionDto = new RegionDto()
+            {
+                Id = regionDomainModel.Id,
+                Code = regionDomainModel.Code,
+                Name = regionDomainModel.Name,
+                RegionImageUrl = regionDomainModel.RegionImageUrl
+            };
+            return CreatedAtAction(nameof(GetById), new {id = regionDto.Id}, regionDto);
         }
     }
 } 
