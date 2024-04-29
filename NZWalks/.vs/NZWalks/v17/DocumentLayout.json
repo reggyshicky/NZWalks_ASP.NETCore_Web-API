@@ -7,16 +7,16 @@
       "RelativeMoniker": "D:0:0:{90FCC886-DF1A-42F9-AD6F-A7910ACA8A01}|NZWalks.API\\NZWalks.API.csproj|solutionrelative:nzwalks.api\\controllers\\regionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{90FCC886-DF1A-42F9-AD6F-A7910ACA8A01}|NZWalks.API\\NZWalks.API.csproj|c:\\users\\hp\\source\\repos\\nzwalks_asp.netcore_web-api\\nzwalks\\nzwalks.api\\models\\domain\\difficulty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{90FCC886-DF1A-42F9-AD6F-A7910ACA8A01}|NZWalks.API\\NZWalks.API.csproj|solutionrelative:nzwalks.api\\models\\domain\\difficulty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{90FCC886-DF1A-42F9-AD6F-A7910ACA8A01}|NZWalks.API\\NZWalks.API.csproj|c:\\users\\hp\\source\\repos\\nzwalks_asp.netcore_web-api\\nzwalks\\nzwalks.api\\models\\dto\\updateregionrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{90FCC886-DF1A-42F9-AD6F-A7910ACA8A01}|NZWalks.API\\NZWalks.API.csproj|solutionrelative:nzwalks.api\\models\\dto\\updateregionrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{90FCC886-DF1A-42F9-AD6F-A7910ACA8A01}|NZWalks.API\\NZWalks.API.csproj|c:\\users\\hp\\source\\repos\\nzwalks_asp.netcore_web-api\\nzwalks\\nzwalks.api\\models\\dto\\addrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{90FCC886-DF1A-42F9-AD6F-A7910ACA8A01}|NZWalks.API\\NZWalks.API.csproj|solutionrelative:nzwalks.api\\models\\dto\\addrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{90FCC886-DF1A-42F9-AD6F-A7910ACA8A01}|NZWalks.API\\NZWalks.API.csproj|c:\\users\\hp\\source\\repos\\nzwalks_asp.netcore_web-api\\nzwalks\\nzwalks.api\\models\\domain\\difficulty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{90FCC886-DF1A-42F9-AD6F-A7910ACA8A01}|NZWalks.API\\NZWalks.API.csproj|solutionrelative:nzwalks.api\\models\\domain\\difficulty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{90FCC886-DF1A-42F9-AD6F-A7910ACA8A01}|NZWalks.API\\NZWalks.API.csproj|c:\\users\\hp\\source\\repos\\nzwalks_asp.netcore_web-api\\nzwalks\\nzwalks.api\\migrations\\20240428201207_nzwalks1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -46,7 +46,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "UpdateRegionRequestDto.cs",
               "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\NZWalks_ASP.NETCore_Web-API\\NZWalks\\NZWalks.API\\Models\\Dto\\UpdateRegionRequestDto.cs",
               "RelativeDocumentMoniker": "NZWalks.API\\Models\\Dto\\UpdateRegionRequestDto.cs",
@@ -59,7 +59,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "AddRequestDto.cs",
               "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\NZWalks_ASP.NETCore_Web-API\\NZWalks\\NZWalks.API\\Models\\Dto\\AddRequestDto.cs",
               "RelativeDocumentMoniker": "NZWalks.API\\Models\\Dto\\AddRequestDto.cs",
@@ -72,7 +72,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "Difficulty.cs",
               "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\NZWalks_ASP.NETCore_Web-API\\NZWalks\\NZWalks.API\\Models\\Domain\\Difficulty.cs",
               "RelativeDocumentMoniker": "NZWalks.API\\Models\\Domain\\Difficulty.cs",
@@ -89,9 +89,9 @@
               "Title": "RegionsController.cs",
               "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\NZWalks_ASP.NETCore_Web-API\\NZWalks\\NZWalks.API\\Controllers\\RegionsController.cs",
               "RelativeDocumentMoniker": "NZWalks.API\\Controllers\\RegionsController.cs",
-              "ToolTip": "C:\\Users\\HP\\source\\repos\\NZWalks_ASP.NETCore_Web-API\\NZWalks\\NZWalks.API\\Controllers\\RegionsController.cs*",
-              "RelativeToolTip": "NZWalks.API\\Controllers\\RegionsController.cs*",
-              "ViewState": "AQIAAHMAAAAAAIA+ljMmwH4AAAAJAAAA",
+              "ToolTip": "C:\\Users\\HP\\source\\repos\\NZWalks_ASP.NETCore_Web-API\\NZWalks\\NZWalks.API\\Controllers\\RegionsController.cs",
+              "RelativeToolTip": "NZWalks.API\\Controllers\\RegionsController.cs",
+              "ViewState": "AQIAAIMAAAAAAAAAAAAAwJAAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-28T20:32:06.483Z",
               "EditorCaption": ""
