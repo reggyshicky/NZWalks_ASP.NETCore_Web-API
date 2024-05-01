@@ -53,7 +53,8 @@ namespace NZWalks.API.Controllers
         public async Task<IActionResult> GetById([FromRoute] Guid id)
         {
             //Region region = _dbContext.Regions.Find(id); //one way to get a single region, Find() method onyly takes the primary key
-            var regionDomain = await _dbContext.Regions.FirstOrDefaultAsync(x => x.Id == id);
+            //var regionDomain = await _dbContext.Regions.FirstOrDefaultAsync(x => x.Id == id);
+            var regionDomain = await _iRegionRepo.GetByIdAsync(id);
          
             
             if (regionDomain == null)
@@ -76,7 +77,7 @@ namespace NZWalks.API.Controllers
 
         //Creating a resource and getting back the resource
         [HttpPost]
-        public async Task<IActionResult> CreateRegion([FromBody] AddRequestDto addRequestDto)
+        public async Task<IActionResult> Create([FromBody] AddRequestDto addRequestDto)
         {
             //Map or covert the Dto to Domain Model
 
@@ -87,9 +88,7 @@ namespace NZWalks.API.Controllers
                 RegionImageUrl = addRequestDto.RegionImageUrl
 
             };
-            await _dbContext.Regions.AddAsync(regionDomainModel);
-            await _dbContext.SaveChangesAsync();
-
+            regionDomainModel = await _iRegionRepo.CreateAsync(regionDomainModel);
             //Map DomainModel to RegionDto
             var regionDto = new RegionDto()
             {
@@ -106,10 +105,12 @@ namespace NZWalks.API.Controllers
         //PUT: https://localhost:portNumber/api/regions/{id}
         [HttpPut]
         [Route("{id:Guid}")]
-        public async Task<IActionResult> Update([FromRoute] Guid id, [FromBody]     UpdateRegionRequestDto updateRegionRequestDto)
+        public async Task<IActionResult> Update([FromRoute] Guid id, [FromBody] UpdateRegionRequestDto updateRegionRequestDto)
         {
+            //Map Dto to Domain Model
+            Region regionDomainModel = new Regions
+            await _iRegionRepo.UpdateAsync(id,);
             //check f region exists
-            var regionDomainModel = await _dbContext.Regions.FirstOrDefaultAsync(x => x.Id == id);
             if (regionDomainModel == null)
             {
                 return NotFound();
