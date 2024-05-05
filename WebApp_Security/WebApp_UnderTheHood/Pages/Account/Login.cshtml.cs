@@ -1,6 +1,8 @@
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.ComponentModel.DataAnnotations;
+using System.Security.Claims;
 
 namespace WebApp_UnderTheHood.Pages.Account
 {
@@ -11,12 +13,41 @@ namespace WebApp_UnderTheHood.Pages.Account
         public void OnGet()
         {
         }
+        public async Task<IActionResult> OnPostAsync()
+        {
+            if (!ModelState.IsValid)
+                return Page();
+            //Verify the credential
+            if (Credential.UserName == "admin" && Credential.Password == "1234")
+            {
+                //Creating a security context
+                List<Claim> claims = new List<Claim> { new Claim(ClaimTypes.Name, "admin"),
+                                                       new Claim(ClaimTypes.Email, "admin@gmail.com"),
+                                                       new Claim("Department", "HR"),
+                                                       new Claim("Admin", "true"),
+                                                       new Claim("Manager", "true")
+                };
+
+
+                //Add claims to a identity
+                ClaimsIdentity identity = new ClaimsIdentity(claims, "ReggyCookieAuth");
+
+                //Claims Principal which makes up the security context
+                ClaimsPrincipal claimsPrincipal = new ClaimsPrincipal(identity);
+
+                //Encript and serialize the security context so that it can go into a cookie
+                await HttpContext.SignInAsync("ReggyCookieAuth", claimsPrincipal);
+                return RedirectToPage("/Index");
+            }
+            return Page();
+
+        }
     }
 
     public class Credential
     {
         [Required]
-        [Display(Description = "User Name")]
+        [Display(Name = "User Name")]
         public string UserName { get; set; } = string.Empty;
         [Required]
         [DataType(DataType.Password)]

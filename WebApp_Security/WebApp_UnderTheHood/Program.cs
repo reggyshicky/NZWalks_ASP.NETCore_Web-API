@@ -2,7 +2,19 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
-
+builder.Services.AddAuthentication("ReggyCookieAuth").AddCookie("ReggyCookieAuth", options =>
+{
+    options.Cookie.Name = "ReggyCookieAuth";
+    //options.LoginPath = "/Account1/Login";
+});
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("HRManagerOnly", policy => policy.RequireClaim("Department", "HR")
+    .RequireClaim("Manager"));
+    options.AddPolicy("AdminOnly", policy => policy.RequireClaim("Admin"));
+    options.AddPolicy("MustBelongToHrDepartment", policy => policy.RequireClaim("Department", "HR"));
+    
+});
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -17,7 +29,7 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
-
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapRazorPages();
