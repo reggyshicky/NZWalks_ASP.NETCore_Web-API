@@ -25,7 +25,8 @@ namespace WebApp_UnderTheHood.Pages.Account
                                                        new Claim(ClaimTypes.Email, "admin@gmail.com"),
                                                        new Claim("Department", "HR"),
                                                        new Claim("Admin", "true"),
-                                                       new Claim("Manager", "true")
+                                                       new Claim("Manager", "true"),
+                                                       new Claim("EmploymentDate", "2023-05-01")
                 };
 
 
@@ -35,8 +36,12 @@ namespace WebApp_UnderTheHood.Pages.Account
                 //Claims Principal which makes up the security context
                 ClaimsPrincipal claimsPrincipal = new ClaimsPrincipal(identity);
 
+                var authProperties = new AuthenticationProperties
+                {
+                    IsPersistent = Credential.RememberMe
+                };
                 //Encript and serialize the security context so that it can go into a cookie
-                await HttpContext.SignInAsync("ReggyCookieAuth", claimsPrincipal);
+                await HttpContext.SignInAsync("ReggyCookieAuth", claimsPrincipal, authProperties);
                 return RedirectToPage("/Index");
             }
             return Page();
@@ -52,5 +57,8 @@ namespace WebApp_UnderTheHood.Pages.Account
         [Required]
         [DataType(DataType.Password)]
         public string Password { get; set; } = string.Empty;
+
+        [Display(Name = "Remember Me")]
+        public bool RememberMe { get; set; }
     }
 }
