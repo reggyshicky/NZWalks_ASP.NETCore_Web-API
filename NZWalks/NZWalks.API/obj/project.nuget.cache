@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "e8bwy/Y4IcotNqip8td9iKYqhAvghO7TXRMPzf1GQhTG6ZLJSFOTD1sbsY1Y7qRWtB2a8oIWy2HIlI/r7MLkiA==",
+  "dgSpecHash": "sV8ElzVKm1UFSOiDf0Jocyio2XUYoiHouZixVlPVfx8xxRZej1lDRYH0INHekvR//QjbHEBxW015zjgf89ds7g==",
   "success": true,
   "projectFilePath": "C:\\Users\\HP\\source\\repos\\NZWalks_ASP.NETCore_Web-API\\NZWalks\\NZWalks.API\\NZWalks.API.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\HP\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

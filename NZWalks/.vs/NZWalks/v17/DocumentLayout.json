@@ -7,12 +7,8 @@
       "RelativeMoniker": "D:0:0:{90FCC886-DF1A-42F9-AD6F-A7910ACA8A01}|NZWalks.API\\NZWalks.API.csproj|solutionrelative:nzwalks.api\\controllers\\regionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{90FCC886-DF1A-42F9-AD6F-A7910ACA8A01}|NZWalks.API\\NZWalks.API.csproj|c:\\users\\hp\\source\\repos\\nzwalks_asp.netcore_web-api\\nzwalks\\nzwalks.api\\repositories\\iregionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{90FCC886-DF1A-42F9-AD6F-A7910ACA8A01}|NZWalks.API\\NZWalks.API.csproj|solutionrelative:nzwalks.api\\repositories\\iregionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{90FCC886-DF1A-42F9-AD6F-A7910ACA8A01}|NZWalks.API\\NZWalks.API.csproj|c:\\users\\hp\\source\\repos\\nzwalks_asp.netcore_web-api\\nzwalks\\nzwalks.api\\repositories\\sqlregionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{90FCC886-DF1A-42F9-AD6F-A7910ACA8A01}|NZWalks.API\\NZWalks.API.csproj|solutionrelative:nzwalks.api\\repositories\\sqlregionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{90FCC886-DF1A-42F9-AD6F-A7910ACA8A01}|NZWalks.API\\NZWalks.API.csproj|c:\\users\\hp\\source\\repos\\nzwalks_asp.netcore_web-api\\nzwalks\\nzwalks.api\\mappings\\automapperprofiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{90FCC886-DF1A-42F9-AD6F-A7910ACA8A01}|NZWalks.API\\NZWalks.API.csproj|solutionrelative:nzwalks.api\\mappings\\automapperprofiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{90FCC886-DF1A-42F9-AD6F-A7910ACA8A01}|NZWalks.API\\NZWalks.API.csproj|c:\\users\\hp\\source\\repos\\nzwalks_asp.netcore_web-api\\nzwalks\\nzwalks.api\\data\\nzwalksdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -41,29 +37,20 @@
               "Name": "ST:1:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "IRegionRepository.cs",
-              "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\NZWalks_ASP.NETCore_Web-API\\NZWalks\\NZWalks.API\\Repositories\\IRegionRepository.cs",
-              "RelativeDocumentMoniker": "NZWalks.API\\Repositories\\IRegionRepository.cs",
-              "ToolTip": "C:\\Users\\HP\\source\\repos\\NZWalks_ASP.NETCore_Web-API\\NZWalks\\NZWalks.API\\Repositories\\IRegionRepository.cs",
-              "RelativeToolTip": "NZWalks.API\\Repositories\\IRegionRepository.cs",
-              "ViewState": "AQIAAAcAAAAAAAAAAAAQwA8AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-30T12:07:03.239Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "SQLRegionRepository.cs",
-              "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\NZWalks_ASP.NETCore_Web-API\\NZWalks\\NZWalks.API\\Repositories\\SQLRegionRepository.cs",
-              "RelativeDocumentMoniker": "NZWalks.API\\Repositories\\SQLRegionRepository.cs",
-              "ToolTip": "C:\\Users\\HP\\source\\repos\\NZWalks_ASP.NETCore_Web-API\\NZWalks\\NZWalks.API\\Repositories\\SQLRegionRepository.cs",
-              "RelativeToolTip": "NZWalks.API\\Repositories\\SQLRegionRepository.cs",
-              "ViewState": "AQIAABsAAAAAAAAAAAAcwCIAAAA4AAAA",
+              "DocumentIndex": 1,
+              "Title": "AutoMapperProfiles.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\NZWalks_ASP.NETCore_Web-API\\NZWalks\\NZWalks.API\\Mappings\\AutoMapperProfiles.cs",
+              "RelativeDocumentMoniker": "NZWalks.API\\Mappings\\AutoMapperProfiles.cs",
+              "ToolTip": "C:\\Users\\HP\\source\\repos\\NZWalks_ASP.NETCore_Web-API\\NZWalks\\NZWalks.API\\Mappings\\AutoMapperProfiles.cs",
+              "RelativeToolTip": "NZWalks.API\\Mappings\\AutoMapperProfiles.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAA0AAABFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-30T01:56:44.59Z",
+              "WhenOpened": "2024-05-07T07:31:04.002Z",
               "EditorCaption": ""
             },
             {
@@ -74,14 +61,14 @@
               "RelativeDocumentMoniker": "NZWalks.API\\Controllers\\RegionsController.cs",
               "ToolTip": "C:\\Users\\HP\\source\\repos\\NZWalks_ASP.NETCore_Web-API\\NZWalks\\NZWalks.API\\Controllers\\RegionsController.cs",
               "RelativeToolTip": "NZWalks.API\\Controllers\\RegionsController.cs",
-              "ViewState": "AQIAAGcAAAAAAAAAAAAkwGkAAAARAAAA",
+              "ViewState": "AQIAAEwAAAAAAAAAAAAAAEwAAABmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-28T20:32:06.483Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "NZWalks.API.http",
               "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\NZWalks_ASP.NETCore_Web-API\\NZWalks\\NZWalks.API\\NZWalks.API.http",
               "RelativeDocumentMoniker": "NZWalks.API\\NZWalks.API.http",
@@ -89,12 +76,11 @@
               "RelativeToolTip": "NZWalks.API\\NZWalks.API.http",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
-              "WhenOpened": "2024-04-30T11:34:21.484Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-30T11:34:21.484Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\NZWalks_ASP.NETCore_Web-API\\NZWalks\\NZWalks.API\\appsettings.json",
               "RelativeDocumentMoniker": "NZWalks.API\\appsettings.json",
@@ -102,12 +88,11 @@
               "RelativeToolTip": "NZWalks.API\\appsettings.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAACCAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-04-30T11:34:22.653Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-30T11:34:22.653Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "NZWalksDbContext.cs",
               "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\NZWalks_ASP.NETCore_Web-API\\NZWalks\\NZWalks.API\\Data\\NZWalksDbContext.cs",
               "RelativeDocumentMoniker": "NZWalks.API\\Data\\NZWalksDbContext.cs",
@@ -115,8 +100,7 @@
               "RelativeToolTip": "NZWalks.API\\Data\\NZWalksDbContext.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-30T10:59:02.895Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-30T10:59:02.895Z"
             }
           ]
         }
