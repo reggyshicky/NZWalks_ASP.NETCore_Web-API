@@ -103,15 +103,7 @@ namespace NZWalks.API.Controllers
             {
                 return NotFound();
             }
-
-            var regionDto = new RegionDto()
-            {
-                Id = regionDomainModel.Id,
-                Code = regionDomainModel.Code,
-                Name = regionDomainModel.Name,
-                RegionImageUrl = regionDomainModel.RegionImageUrl
-
-            };
+            var regionDto = _iMapper.Map<RegionDto>(regionDomainModel);
             return Ok(regionDto);
         }
         
