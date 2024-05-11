@@ -1,9 +1,10 @@
 using Microsoft.AspNetCore.Authentication;
 using System.Security.Claims;
+const string AuthScheme = "cookie";
 
 var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddAuthentication("Cookie")
-    .AddCookie("Cookie");
+builder.Services.AddAuthentication("AuthScheme")
+    .AddCookie("AuthScheme");
 
 var app = builder.Build();
 app.UseAuthentication();
@@ -23,9 +24,9 @@ app.MapGet("/login", async (HttpContext ctx) =>
 {
     var claims = new List<Claim>();
     claims.Add(new Claim("usr", "reginah"));
-    var identity = new ClaimsIdentity(claims, "Cookie");
+    var identity = new ClaimsIdentity(claims, "AuthScheme");
     var user = new ClaimsPrincipal(identity);
-    await ctx.SignInAsync("Cookie", user);
+    await ctx.SignInAsync("AuthScheme", user);
     return "ok";
 });
 
