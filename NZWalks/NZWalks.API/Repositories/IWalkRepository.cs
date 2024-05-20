@@ -1,4 +1,5 @@
 ﻿using NZWalks.API.Models.Domain;
+using System.ComponentModel.DataAnnotations;
 
 namespace NZWalks.API.Repositories
 {
@@ -6,8 +7,13 @@ namespace NZWalks.API.Repositories
     {
         Task<Walk> CreateAsync(Walk walk);
 
-        Task<List<Walk>> GetAllAsync();
+        Task<List<Walk>> GetAllAsync(string? filterOn = null, string? filterQuery = null,
+            string? sortBy = null, bool isAscending = true);
 
         Task<Walk?> GetByIdAsync(Guid id);
+
+        Task<Walk?> UpdateWalkAsync(Guid id, Walk walk);
+
+        Task<Walk?> DeleteWalkAsync(Guid id);
     }
 }

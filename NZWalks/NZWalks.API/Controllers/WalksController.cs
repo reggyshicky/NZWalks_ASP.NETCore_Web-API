@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ApiExplorer;
 using Microsoft.Extensions.Logging;
+using NZWalks.API.CustomActionFilter;
 using NZWalks.API.Models.Domain;
 using NZWalks.API.Models.Dto;
 using NZWalks.API.Repositories;
@@ -25,20 +26,24 @@ namespace NZWalks.API.Controllers
         //CREATE WALK
         //POST> /api/walks
         [HttpPost]
+        [ValidateModel]
         public async Task<IActionResult> Create([FromBody] AddWalkDto addWalkDto)
         {
-            //Map Dto to Domain Model
+            //To check modelstate - we use the CustomValidateAttribute class
             var walk = _iMapper.Map<Walk>(addWalkDto);
             await _walkRepo.CreateAsync(walk);
-            //Map Domain Model to Dto
             var walkResponseDto = _iMapper.Map<WalkResponseDto>(walk);
             return Ok(walkResponseDto);
         }
 
+        //Get walks
+        //GET: /api/walks?filterOn=Name&filterQuery=beach&sortBy=Name&isAscendnig=true
+        //filterOn - what column do you want me to filter on
         [HttpGet]
-        public async Task<IActionResult> GetAll()
+        public async Task<IActionResult> GetAll([FromQuery] string? filterOn, [FromQuery] string? filterQuery,
+            [FromQuery] string? sortBy, [FromQuery] bool? isAscending)
         {
-            var walksDomainModel = await _walkRepo.GetAllAsync();
+            var walksDomainModel = await _walkRepo.GetAllAsync(filterOn, filterQuery, sortBy, isAscending ?? true);
 
             return Ok(_iMapper.Map<List<WalkResponseDto>>(walksDomainModel));
         }
@@ -53,6 +58,35 @@ namespace NZWalks.API.Controllers
                 return NotFound();
             }
             return Ok(_iMapper.Map<WalkResponseDto>(walkDomainModel));
+        }
+
+        [HttpPut]
+        [Route("{id:Guid}")]
+        [ValidateModel]
+        public async Task<IActionResult> UpdateWalk([FromRoute] Guid id, UpdateWalkRequestDto updateDto)
+        {
+            var walkDomainModel = _iMapper.Map<Walk>(updateDto);
+
+
+            walkDomainModel = await _walkRepo.UpdateWalkAsync(id, walkDomainModel);
+            if (walkDomainModel == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(_iMapper.Map<UpdateWalkRequestDto>(walkDomainModel));
+        }
+
+        [HttpDelete]
+        [Route("{id:Guid}")]
+        public async Task<IActionResult> DeleteWalk([FromRoute] Guid id)
+        {
+            var deletedWalkDomainModel = _walkRepo.DeleteWalkAsync(id);
+            if (deletedWalkDomainModel == null)
+            {
+                return NotFound();
+            }
+            return Ok(_iMapper.Map<WalkResponseDto>(deletedWalkDomainModel));
         }
 
     }

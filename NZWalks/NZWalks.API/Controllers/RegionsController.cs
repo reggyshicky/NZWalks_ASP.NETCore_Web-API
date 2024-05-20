@@ -1,7 +1,6 @@
 ﻿using AutoMapper;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
+using NZWalks.API.CustomActionFilter;
 using NZWalks.API.Data;
 using NZWalks.API.Models.Domain;
 using NZWalks.API.Models.Dto;
@@ -26,7 +25,7 @@ namespace NZWalks.API.Controllers
 
 
         [HttpGet]
-        public async Task<IActionResult>  GetAll()
+        public async Task<IActionResult> GetAll()
         {
             //Get Data from Db - Domain Models
             var regionsDomain = await _iRegionRepo.GetAllAsync();
@@ -44,8 +43,8 @@ namespace NZWalks.API.Controllers
         {
             //Region region = _dbContext.Regions.Find(id); //one way to get a single region, Find() method onyly takes the primary key
             var regionDomain = await _iRegionRepo.GetByIdAsync(id);
-         
-            
+
+
             if (regionDomain == null)
             {
                 return NotFound();
@@ -55,45 +54,38 @@ namespace NZWalks.API.Controllers
             return Ok(regionDto);
         }
 
-
-        //Creating a resource and getting back the resource
         [HttpPost]
+        [ValidateModel] //using NZWalks.API.CustomActionFilter;
+
         public async Task<IActionResult> Create([FromBody] AddRequestDto addRequestDto)
         {
-            //Map or covert the Dto to Domain Model
+
             var regionDomainModel = _iMapper.Map<Region>(addRequestDto);
             regionDomainModel = await _iRegionRepo.CreateAsync(regionDomainModel);
-            //Map DomainModel to RegionDto
-
             var regionDto = _iMapper.Map<RegionDto>(regionDomainModel);
-            return CreatedAtAction(nameof(GetById), new {id = regionDto.Id}, regionDto);
+            return CreatedAtAction(nameof(GetById), new { id = regionDto.Id }, regionDto);
+
         }
 
 
-        //Update Region
-        //PUT: https://localhost:portNumber/api/regions/{id}
         [HttpPut]
         [Route("{id:Guid}")]
+        [ValidateModel]
         public async Task<IActionResult> Update([FromRoute] Guid id, [FromBody] UpdateRegionRequestDto updateRegionRequestDto)
         {
-            //Map Dto to Domain Model
             var regionDomainModel = _iMapper.Map<Region>(updateRegionRequestDto);
             regionDomainModel = await _iRegionRepo.UpdateAsync(id, regionDomainModel);
-            //check f region exists
             if (regionDomainModel == null)
             {
                 return NotFound();
             }
 
 
-            //Convert Domain Model to Dto
             var regionDto = _iMapper.Map<RegionDto>(regionDomainModel);
 
             return Ok(regionDto);
         }
 
-        //Delete a region
-        //DELETE: https://localhost:portNumber/api/regions/{id
         [HttpDelete]
         [Route("{id:Guid}")] //making it typesafe
         public async Task<IActionResult> DeleteRegion([FromRoute] Guid id)
@@ -106,7 +98,5 @@ namespace NZWalks.API.Controllers
             var regionDto = _iMapper.Map<RegionDto>(regionDomainModel);
             return Ok(regionDto);
         }
-        
-
     }
-} 
+}

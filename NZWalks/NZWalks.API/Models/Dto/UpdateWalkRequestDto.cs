@@ -2,7 +2,7 @@
 
 namespace NZWalks.API.Models.Dto
 {
-    public class AddWalkDto
+    public class UpdateWalkRequestDto
     {
         [Required]
         [MaxLength(100)]
@@ -22,6 +22,5 @@ namespace NZWalks.API.Models.Dto
 
         [Required]
         public Guid RegionId { get; set; }
-
     }
 }
