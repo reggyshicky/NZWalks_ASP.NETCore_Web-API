@@ -1,0 +1,10 @@
+ASP.NET CORE IDENTITY UNDER THE HOOD | AUTHENTICATION AND AUTHORIZATION
+Authentication - Verify you are who you say you are & generate security context. Security context is all your identity info that is relevant to the facility
+
+ASP.NET CORE SECURITY CONTEXT
+Security contains all the information that the user has for security purposes
+that include username, 
+
+INSERT INTO [dbo].[AspNetUserRoles]
+(Id, Name)
+VALUES (NEWID(), 'admin')

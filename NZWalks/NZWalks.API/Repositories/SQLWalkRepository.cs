@@ -1,4 +1,5 @@
-﻿using NZWalks.API.Data;
+﻿using Microsoft.EntityFrameworkCore;
+using NZWalks.API.Data;
 using NZWalks.API.Models.Domain;
 
 namespace NZWalks.API.Repositories
@@ -15,6 +16,21 @@ namespace NZWalks.API.Repositories
             await _db.Walks.AddAsync(walk);
             await _db.SaveChangesAsync();
             return walk;
+
+        }
+
+        public async Task<List<Walk>> GetAllAsync()
+        {
+            //return await _db.Walks.Include(x=>x.Difficulty).Include(x=>x.Region).ToListAsync();
+            return await _db.Walks.Include("Difficulty").Include("Region").ToListAsync();
+        }
+
+        public async Task<Walk?> GetByIdAsync(Guid id)
+        {
+            return await _db.Walks.
+                Include("Difficulty")
+                .Include("Region")
+                .FirstOrDefaultAsync(x => x.Id == id);
 
         }
     }
