@@ -8,3 +8,9 @@ that include username,
 INSERT INTO [dbo].[AspNetUserRoles]
 (Id, Name)
 VALUES (NEWID(), 'admin')
+
+Nuget Packages:
+Microsoft.AspNetCore.Authentication.JwtBearer
+Microsoft.IdentityModel.Tokens
+System.IdentityModel.Tokens.Jwt
+Microsoft.AspNetCore.Identity.EntityFrameworkCore
