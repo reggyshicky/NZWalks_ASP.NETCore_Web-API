@@ -37,13 +37,15 @@ namespace NZWalks.API.Controllers
         }
 
         //Get walks
-        //GET: /api/walks?filterOn=Name&filterQuery=beach&sortBy=Name&isAscendnig=true
+        //GET: /api/walks?filterOn=Name&filterQuery=beach&sortBy=Name&isAscendnig=true&pageNumber=1&pageSize=10
         //filterOn - what column do you want me to filter on
         [HttpGet]
         public async Task<IActionResult> GetAll([FromQuery] string? filterOn, [FromQuery] string? filterQuery,
-            [FromQuery] string? sortBy, [FromQuery] bool? isAscending)
+            [FromQuery] string? sortBy, [FromQuery] bool? isAscending,
+            [FromQuery] int pageNumber = 1, [FromQuery] int pageSize = 1000)
         {
-            var walksDomainModel = await _walkRepo.GetAllAsync(filterOn, filterQuery, sortBy, isAscending ?? true);
+            var walksDomainModel = await _walkRepo.GetAllAsync(filterOn, filterQuery, sortBy,
+                isAscending ?? true, pageNumber, pageSize);
 
             return Ok(_iMapper.Map<List<WalkResponseDto>>(walksDomainModel));
         }
