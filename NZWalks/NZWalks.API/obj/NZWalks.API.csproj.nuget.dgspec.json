@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\HP\\source\\repos\\NZWalks_ASP.NETCore_Web-API\\NZWalks\\NZWalks.API\\NZWalks.API.csproj": {}
+    "D:\\C# and .NET projects\\NZWalks_ASP.NETCore_Web-API\\NZWalks\\NZWalks.API\\NZWalks.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\HP\\source\\repos\\NZWalks_ASP.NETCore_Web-API\\NZWalks\\NZWalks.API\\NZWalks.API.csproj": {
+    "D:\\C# and .NET projects\\NZWalks_ASP.NETCore_Web-API\\NZWalks\\NZWalks.API\\NZWalks.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\HP\\source\\repos\\NZWalks_ASP.NETCore_Web-API\\NZWalks\\NZWalks.API\\NZWalks.API.csproj",
+        "projectUniqueName": "D:\\C# and .NET projects\\NZWalks_ASP.NETCore_Web-API\\NZWalks\\NZWalks.API\\NZWalks.API.csproj",
         "projectName": "NZWalks.API",
-        "projectPath": "C:\\Users\\HP\\source\\repos\\NZWalks_ASP.NETCore_Web-API\\NZWalks\\NZWalks.API\\NZWalks.API.csproj",
+        "projectPath": "D:\\C# and .NET projects\\NZWalks_ASP.NETCore_Web-API\\NZWalks\\NZWalks.API\\NZWalks.API.csproj",
         "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HP\\source\\repos\\NZWalks_ASP.NETCore_Web-API\\NZWalks\\NZWalks.API\\obj\\",
+        "outputPath": "D:\\C# and .NET projects\\NZWalks_ASP.NETCore_Web-API\\NZWalks\\NZWalks.API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",

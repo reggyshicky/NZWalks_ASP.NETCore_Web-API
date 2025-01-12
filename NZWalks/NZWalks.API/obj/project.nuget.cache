@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0xHdoc5ToiLrta4kcx7P8wiYx5kOvgww/WkXOWtky6Qs0eb4/nwijn5qZKkftd20otvdkDapp4uGtJzQizqajw==",
+  "dgSpecHash": "Kft5dy7JLg8iwCPI5DL2Te4a/K0QnHy3drQ1/EpkVW2N+YsYa8e8EcSy9y23jyHtdyvhI+8QXdSUOb1GRNPUDg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\HP\\source\\repos\\NZWalks_ASP.NETCore_Web-API\\NZWalks\\NZWalks.API\\NZWalks.API.csproj",
+  "projectFilePath": "D:\\C# and .NET projects\\NZWalks_ASP.NETCore_Web-API\\NZWalks\\NZWalks.API\\NZWalks.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\HP\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
